@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengaturan Akun</title>
+    <style>
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #000000;
+        padding: 15px;
+      }
+
+      nav table {
+        width: 100%;
+      }
+
+      nav td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      nav a:hover {
+        color: #e63946;
+      }
+
+      .kotak {
+        background: #292929;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #0d0d0d;
+        color: white;
+      }
+
+      h1 {
+        color: #ff4655;
+      }
+
+      h3 {
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .input-group {
+        margin-bottom: 15px;
+      }
+      .input-group label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .input-group input {
+        width: calc(100% - 16px);
+        padding: 8px;
+        background: #333;
+        border: 1px solid #555;
+        color: white;
+        border-radius: 5px;
+      }
+
+      button {
+        background: red;
+        border: none;
+        padding: 10px 15px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+      button:hover {
+        background: darkred;
+        transform: scale(1.1);
+      }
+
+      .container {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .content {
+        flex: 2;
+      }
+
+      .sidebar {
+        position: sticky;
+        top: 80px;
+        height: fit-content;
+        flex: 1;
+        background: #1c1c1c;
+        padding: 15px;
+        border-radius: 8px;
+      }
+
+      .sidebar h2 {
+        color: #ff4655;
+        font-size: 18px;
+      }
+
+      .sidebar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .sidebar li {
+        margin: 10px 0;
+      }
+
+      .sidebar a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 8px;
+        background: #292929;
+        border-radius: 5px;
+        transition: 0.3s;
+        transition: background 0.3s ease, transform 0.3s ease;
+      }
+      .sidebar a:hover {
+        background: #e63946;
+        transform: translateX(10px);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <table>
+          <tr>
+            <td><a href="#">GAME</a></td>
+            <td><a href="#">ESPORT</a></td>
+            <td><a href="#">BERITA</a></td>
+            <td><a href="#">TOKO</a></td>
+            <td><a href="#">AKUN</a></td>
+          </tr>
+        </table>
+      </nav>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <h1>Pengaturan Akun</h1>
+        <ul>
+          <li><a href="#game-id">GAME ID</a></li>
+          <li><a href="#info-personal">INFORMASI PERSONAL</a></li>
+          <li><a href="#koneksi-akun">KONEKSI AKUN</a></li>
+          <li><a href="#manajemen-login">MANAJEMEN LOGIN</a></li>
+        </ul>
+      </aside>
+
+      <div class="content">
+        <section id="game-id" class="kotak">
+          <h3>GAME ID</h3>
+          <p>GAME ID digunakan sebagai identitas player pada platform ini.</p>
+          <div class="input-group">
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname" placeholder="Username" />
+            <label for="tagline">Tagline:</label>
+            <input type="text" id="tagline" name="tagline" placeholder="#" />
+            <button onclick="simpanGameID()">SIMPAN</button>
+          </div>
+        </section>
+
+        <section id="info-personal" class="kotak">
+          <h3>INFORMASI PERSONAL</h3>
+          <p>
+            Data pribadi yang digunakan untuk mengamankan akun anda, informasi tersebut tidak akan dibagikan
+            kepada pihak lain.
+          </p>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+            <label for="negara">Negara:</label>
+            <input type="text" id="negara" name="negara" />
+            <label for="tgl_lahir">Tanggal Lahir:</label>
+            <input type="date" id="tgl_lahir" name="tgl_lahir" />
+            <button onclick="simpanPersonal()">SIMPAN</button>
+          </div>
+        </section>
+
+        <section id="koneksi-akun" class="kotak">
+          <h3>KONEKSI AKUN</h3>
+          <p>Hubungkan akunmu dengan platform lain untuk keamanan tambahan.</p>
+          <a href="#"
+            ><img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+              alt="Facebook"
+              width="40"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA"
+              alt="Google"
+              width="40"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+              alt="Apple"
+              width="40"
+          /></a>
+        </section>
+
+        <section id="manajemen-login" class="kotak">
+          <h3>MANAJEMEN LOGIN</h3>
+          <p>Keluar dari semua perangkat jika merasa akunmu tidak aman.</p>
+          <button onclick="keluarSemuaPerangkat()">Keluar dari semua perangkat</button>
+        </section>
+      </div>
+    </div>
+
+    <footer>
+      <p>© Mohammad Haekal - 231011061 - IK23C</p>
+    </footer>
+  </body>
+</html>
